@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>erste JS Übungen</title>
+    <script>
+       // window.alert("Hello aus Javascript");
+       // window.alert("Heute ist Freitag");
+       /* console.log("Hello aus der Konsole");
+       console.log("Die Konsole wird mit F12 aufgerufen in jedem Browser");
+       console.log(3+4); */
+
+       function rechneZahlen() {
+        alert("bin in rechnen");
+        console.log(3+4);
+
+       }
+
+       function deinenNamenAusgeben(){
+           console.log("Paul Ranegger");
+       }
+       function deinenNamenAusgeben2(name){
+           
+            console.log(name);
+       }
+       function textAusgeben() {
+        alert("bin in text ausgeben");
+        console.log (document.form1.vorname.value);   // value ist der Inhalt des Textfeldes
+
+       }
+    </script>
+</head>
+<body>
+    <h1>Arbeiten mit JS</h1>
+    <ul>
+        <li>Browser</li>
+        <li>script Tag, egal wo (head, im body</li>
+        <li>Ausführung des Befehls zur Ladezeit oder mit Aufruf</li>
+        <li>Anzeige von Texten im Dialog</li>
+        <li>Kommentare mit // /* */ aus C und Java</li>
+        <li>Konsolenausgaben</li>
+        <li>Formularelemente input mit type text und button</li>
+        <li>Funktionen</li>
+        <li>Events onclick onmouseover ...</li>
+        <p>kleine Aufgabe: Erstelle einen weiteren Button meinName und gib in der 
+            Funktion deinenNameAusgeben deinen Namen in der Konsole aus. </p> 
+            	<p>die Funktion soll den Namen aus dem Textfeld übernehmen</p>
+        </>
+    </ul>
+
+    <h1>Erstellen eines Formulars</h1>
+    <form name="form1" action="Starten von PHPProgrammen.php">
+
+        <label for="">Name</label>
+        <input type="text" name="vorname">
+        <input type="button" value="Rechne" onclick="rechneZahlen();">
+        <input type="button" value="MeinName" onclick="deinenNamenAusgeben();">
+        <input type="button" value="Parameter" onclick="deinenNamenAusgeben2('Michael Hütl');">
+        <input type="button" value="Textfeld ausgeben" onclick="textAusgeben();">
+        <input type="reset">
+
+
+    </form>
+
+
+    <ul>
+       
+        
+       
+        <li>events</li>
+        <li>Spracheelemente</li>
+        <li>Befehle bestehen werden mit ; beendet</li>
+        <li>direkte ausführung bei Datei öffnen oder Start durch Funktionsaufruf</li>
+        <li>Wichtig ist die Fehlerkontrolle mit Webkonsole F12</li>
+
+
+     <script>
+       // window.alert("Wann erscheinst den du?");
+    </script>
+</body>
+</html>

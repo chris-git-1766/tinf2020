@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Datei mit JS</title>
+    <script>
+    // alert("hier kommt der Text");
+    function ersteFunktion(){
+        var x = 5;
+        var y = 7;
+        //alert ("Das Ergebnis = " + x + y); // zeigt wie er mit Datentypen umgeht
+        //alert ("Das Ergebnis = " + (x + y));
+        let xx = 7;
+        const pi = 3.1415927;
+        console.log (xx + " PI: " + pi);
+    }
+
+    function zweiteFunktion(formal){
+     
+        console.log("PArameter: " + formal);
+    }
+
+    function dritteFunktion(){
+     //einlesen der Formularelemente
+      
+     console.log("Name: " + document.f1.name.value);
+     window.document.f1.area.value="Franz";
+     return false;
+ }
+    </script>
+    <style>
+        input {
+            display: block;
+            margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Was brauchen wir für JS</h1>
+    <ul>
+        <li>Browser</li>
+        <li>script Tag, egal wo </li>
+        <li>Formulare</li>
+        <li>events</li>
+        <li>Spracheelemente</li>
+        <li>Befehle bestehen werden mit ; beendet</li>
+        <li>direkte ausführung bei Datei öffnen oder Start durch Funktionsaufruf</li>
+        <li>Wichtig ist die Fehlerkontrolle mit Webkonsole F12</li>
+
+        <li> Wir können also Rechnen und die Ausgaben uns ansehen </li>
+        <button onclick="ersteFunktion();">Aufruf</button>
+        <li> Wir können Werte übergeben </li>
+        <button onclick="zweiteFunktion('jessas');">Aufruf2</button>
+        
+        <li> Formulare </li>
+        <li>Ende und Anfangtext</li>
+        <li>Viele Elemente wie Text, Textarea, Buttons, Optionsschalter, Checkboxen</li>
+        <li>alles inline Elemente --> display Block</li>
+        <li>ideal haben die Elemente name oder id Eigenschaft</li>
+        <li>Verwende input type="button" statt button </li>
+        <form action="" name="f1" >
+            <label for="">Beispiellabel z.B. Name</label>
+        <input name="name" type="text" value="wird gelöscht">
+        <label for="">Passwordeingabe</label>
+        <input type="password">
+        <textarea name="area" id="" cols="30" rows="10"></textarea>
+        <input type="checkbox" name="schule">HTL
+        <input type="checkbox" checked name="schule">AHS
+        <label for="">Zahl</label>
+        <input type="text" id="number">
+
+        <input type="button" onclick="dritteFunktion();" value="Aufruf3">
+        <input type="button" onclick="veraendereFunktion();" value="Aufruf4">
+         </form>
+        
+        <script>
+            console.log("Schreibt in die Konsole");
+            // dieser Befehl wird auch automatisch ausgeführt
+            function veraendereFunktion(){
+            //einlesen der Formularelemente
+            let i = document.getElementsByTagName("button");
+            for (let x = 0 ; x < i.length; x++)
+                i[x].style.borderRadius="5px";
+            console.log("Name: " + document.f1.name.value);
+            window.document.f1.area.value="Franz";
+            
+            return false;
+        }
+        </script>
+    </ul>
+</body>
+</html>
